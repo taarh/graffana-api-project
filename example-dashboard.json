@@ -1,0 +1,28 @@
+{
+  "panels": [
+    {
+      "title": "API Response Time",
+      "targets": [
+        {
+          "expr": "rate(client_save_time_seconds_sum[5m])/rate(client_save_time_seconds_count[5m])"
+        }
+      ]
+    },
+    {
+      "title": "Successful Client Saves",
+      "targets": [
+        {
+          "expr": "client_save_success_total"
+        }
+      ]
+    },
+    {
+      "title": "JVM Memory Usage",
+      "targets": [
+        {
+          "expr": "jvm_memory_used_bytes"
+        }
+      ]
+    }
+  ]
+} 
