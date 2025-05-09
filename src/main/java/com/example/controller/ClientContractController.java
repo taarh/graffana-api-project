@@ -18,4 +18,8 @@ public class ClientContractController {
         Client savedClient = clientContractService.saveClientWithContracts(client);
         return ResponseEntity.ok(savedClient);
     }
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("TEST");
+    }
 } 
