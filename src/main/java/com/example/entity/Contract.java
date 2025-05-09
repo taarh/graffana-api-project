@@ -2,6 +2,7 @@ package com.example.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.time.LocalDate;
 
 @Entity
@@ -16,6 +17,7 @@ public class Contract {
     private LocalDate endDate;
     private String product;
     
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "client_id")
     private Client client;
